@@ -16,3 +16,7 @@ RUN apt-get update && apt-get install -y libgmp-dev libz-dev \
 && rm -r cabal-install-$CABAL_VERSION
 
 RUN cabal update && echo >>~/.cabal/config user-install: False
+RUN cabal install lens
+RUN cabal install hspec
+RUN cabal install either
+RUN cabal install cereal
